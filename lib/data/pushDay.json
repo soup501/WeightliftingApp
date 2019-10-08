@@ -1,0 +1,68 @@
+{
+  "exercises": [
+    {
+      "name": "Deadlift",
+      "first": true,
+      "group": "A",
+      "exercise": 1
+    },
+    {
+      "name": "Barbell Rows",
+      "first": true,
+      "group": "A",
+      "exercise": 1
+    },
+    {
+      "name": "Seated Cable Rows",
+      "group": "A",
+      "exercise": 2
+    },{
+      "name": "Chest Supported Rows",
+      "group": "A",
+      "exercise": 2
+    },
+    {
+      "name": "Face Pulls",
+      "group": "A",
+      "exercise": 3
+    },
+    {
+      "name": "Hammer Curls",
+      "group": "A",
+      "exercise": 4
+    },
+    {
+      "name": "Bench Press",
+      "first": true,
+      "group": "B",
+      "exercise": 1
+    }, {
+      "name": "Overhead Press",
+      "first": true,
+      "group": "B",
+      "exercise": 2
+    }, {
+      "name": "Incline Dumbbell Press",
+      "group": "B",
+      "exercise": 2
+    }, {
+      "name": "Triceps Pushdowns",
+      "group": "B",
+      "exercise": 2,
+      "superset": true
+    }, {
+      "name": "Lateral Raise",
+      "group": "B",
+      "exercise": 2
+    }, {
+      "name": "Overhead Triceps Extension",
+      "group": "B",
+      "exercise": 2,
+      "superset": true
+    }, {
+      "name": "Lateral Raise",
+      "group": "B",
+      "exercise": 2
+    }
+  ]
+}

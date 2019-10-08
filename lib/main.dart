@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:workout_tracker/stats.dart';
+import 'workout.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Workout Tracker',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Home'),
     );
   }
 }
@@ -44,21 +46,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
+    getWidget(String page) {
+      var materialPageRoute;
+      if (page == 'workout') {
+        materialPageRoute = MaterialPageRoute(builder: (context) => Workout());
+      } else if (page == 'stats') {
+        materialPageRoute = MaterialPageRoute(builder: (context) => Stats());
+      }
+      return materialPageRoute;
+    }
+
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -91,21 +90,33 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            new MaterialButton(
+              padding: const EdgeInsets.all(8.0),
+              textColor: Colors.white,
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  getWidget('workout'),
+                );
+              },
+              child: new Text("Workout"),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            new MaterialButton(
+              padding: const EdgeInsets.all(8.0),
+              textColor: Colors.white,
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  getWidget('stats'),
+                );
+              },
+              child: new Text("Stats / Records"),
+            )
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
