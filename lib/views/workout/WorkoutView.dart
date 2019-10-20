@@ -22,8 +22,6 @@ class WorkoutView extends StatelessWidget {
     return BoxDecoration(border: border);
   }
 
-  void clickEvent() {}
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,14 +41,14 @@ class WorkoutView extends StatelessWidget {
                               decoration: myBoxDecoration('start'),
                               child: new GestureDetector(
                                 onTap: () {
-                                  showDialog(context: context);
+                                  showAlert(context);
                                 },
                                 child: Center(
                                     child: Text('Left',
                                         textAlign: TextAlign.center)),
                               ),
                               height: MediaQuery.of(context).size.height * 0.1),
-                          flex: 1),
+                          flex: 6),
                       Expanded(
                           child: Container(
                               decoration: myBoxDecoration('start'),
@@ -58,32 +56,43 @@ class WorkoutView extends StatelessWidget {
                                   child: Text('Right',
                                       textAlign: TextAlign.center)),
                               height: MediaQuery.of(context).size.height * 0.1),
-                          flex: 1)
+                          flex: 4)
                     ]),
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: <
                         Widget>[
                       Expanded(
                           child: Container(
                               decoration: myBoxDecoration('start'),
-                              child: Center(
-                                  child: Text('Bottom Left',
-                                      textAlign: TextAlign.center)),
+                              child: Icon(
+                                Icons.all_inclusive,
+                                color: Colors.indigo,
+                                size: 60.0,
+                                semanticLabel:
+                                    'Text to announce in accessibility modes',
+                              ),
                               height: MediaQuery.of(context).size.height * 0.1),
                           flex: 1),
                       Expanded(
                           child: Container(
                               decoration: myBoxDecoration('middle'),
-                              child: Center(
-                                  child: Text('Bottom Mid',
-                                      textAlign: TextAlign.center)),
+                              child: Icon(
+                                Icons.assessment,
+                                color: Colors.deepOrangeAccent,
+                                size: 60.0,
+                                semanticLabel: 'Text to announce in accessibility modes',
+                              ),
                               height: MediaQuery.of(context).size.height * 0.1),
                           flex: 1),
                       Expanded(
                           child: Container(
                               decoration: myBoxDecoration('end'),
-                              child: Center(
-                                  child: Text('Bottom Right',
-                                      textAlign: TextAlign.center)),
+                              child: Icon(
+                                Icons.add_box,
+                                color: Colors.blue,
+                                size: 60.0,
+                                semanticLabel:
+                                    'Text to announce in accessibility modes',
+                              ),
                               height: MediaQuery.of(context).size.height * 0.1),
                           flex: 1)
                     ]),

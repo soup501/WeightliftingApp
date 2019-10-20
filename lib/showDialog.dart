@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void _showDialog(BuildContext context) {
+void showAlert(BuildContext context) {
   // flutter defined function
   showDialog(
     context: context,

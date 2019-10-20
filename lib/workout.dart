@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:workout_tracker/views/WorkoutView.dart';
+import 'package:workout_tracker/views/workout/WorkoutView.dart';
 
 class Workout extends StatelessWidget {
   @override
