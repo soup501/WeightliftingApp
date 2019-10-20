@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workout_tracker/views/WorkoutView.dart';
 
 class Workout extends StatelessWidget {
   @override
@@ -14,7 +15,10 @@ class Workout extends StatelessWidget {
             new RaisedButton(
               child: Text('Push Day'),
               onPressed: () {
-                // Navigate to second route when tapped.
+                Navigator.push(
+                  context,
+                    MaterialPageRoute(builder: (context) => WorkoutView())
+                );
               },
             ),
             new RaisedButton(

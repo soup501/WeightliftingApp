@@ -48,21 +48,21 @@
     }, {
       "name": "Triceps Pushdowns",
       "group": "B",
-      "exercise": 2,
+      "exercise": 3,
       "superset": true
     }, {
       "name": "Lateral Raise",
       "group": "B",
-      "exercise": 2
+      "exercise": 4
     }, {
       "name": "Overhead Triceps Extension",
       "group": "B",
-      "exercise": 2,
+      "exercise": 5,
       "superset": true
     }, {
       "name": "Lateral Raise",
       "group": "B",
-      "exercise": 2
+      "exercise": 6
     }
   ]
 }
