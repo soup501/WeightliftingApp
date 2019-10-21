@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:workout_tracker/stats.dart';
 import 'workout.dart';
 
 void main() => runApp(MyApp());
@@ -53,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
       if (page == 'workout') {
         materialPageRoute = MaterialPageRoute(builder: (context) => Workout());
       } else if (page == 'stats') {
-        materialPageRoute = MaterialPageRoute(builder: (context) => Stats());
+        materialPageRoute = MaterialPageRoute(builder: (context) => Workout());
       }
       return materialPageRoute;
     }
