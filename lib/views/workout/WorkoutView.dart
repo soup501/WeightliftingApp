@@ -2,7 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:workout_tracker/model/exercise.dart';
-import 'package:workout_tracker/views/workout/ExerciseView.dart';
+import 'package:workout_tracker/widgets/exercise/ExerciseContainer.dart';
+import 'package:workout_tracker/widgets/exercise/ExerciseWidget.dart';
 
 
 class WorkoutView extends StatelessWidget {
@@ -26,7 +27,7 @@ class WorkoutView extends StatelessWidget {
     List<Exercise> exercises =
     parseJson(snapshot.data.toString());
     return !exercises.isEmpty
-    ? new ExerciseView(exercises[0])
+    ? new ExerciseContainer(exercises)
         : new Center(child: new CircularProgressIndicator());
     }),
     );
